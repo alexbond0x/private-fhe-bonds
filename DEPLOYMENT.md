@@ -1,6 +1,6 @@
-# Vercel Deployment Guide for Private FHE Bonds
+# Deployment Guide for FHE Bond Exchange
 
-This guide provides step-by-step instructions for deploying the Private FHE Bonds platform to Vercel.
+This guide provides step-by-step instructions for deploying the FHE Bond Exchange platform to Vercel.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ Ensure your code is pushed to GitHub:
 
 ```bash
 git add .
-git commit -m "Prepare for Vercel deployment"
+git commit -m "Prepare for deployment"
 git push origin main
 ```
 
@@ -29,13 +29,13 @@ git push origin main
 2. **Import Project**
    - Click "New Project" or "Import Project"
    - Select "Import Git Repository"
-   - Choose `alexbond0x/private-fhe-bonds` from the list
+   - Choose your repository from the list
    - Click "Import"
 
 ### 3. Configure Project Settings
 
 1. **Project Name**
-   - Set project name: `private-fhe-bonds`
+   - Set project name: `fhe-bond-exchange`
    - Framework Preset: `Vite`
    - Root Directory: `./` (default)
 
@@ -50,9 +50,9 @@ Add the following environment variables in Vercel dashboard:
 
 ```
 NEXT_PUBLIC_CHAIN_ID=11155111
-NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/b18fb7e6ca7045ac83c41157ab93f990
-NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=2ec9743d0d0cd7fb94dee1a7e6d33475
-NEXT_PUBLIC_INFURA_API_KEY=b18fb7e6ca7045ac83c41157ab93f990
+NEXT_PUBLIC_RPC_URL=your_rpc_url_here
+NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=your_project_id_here
+NEXT_PUBLIC_INFURA_API_KEY=your_api_key_here
 ```
 
 **To add environment variables:**

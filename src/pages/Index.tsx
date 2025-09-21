@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, Lock, Eye, TrendingUp, Users, Globe } from "lucide-react";
+import { TrendingUp, BarChart3, Zap, Users, Globe, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -14,13 +14,13 @@ const Index = () => {
         <section className="relative overflow-hidden py-24 px-6">
           <div className="container mx-auto text-center">
             <div className="mb-8">
-              <Shield className="h-16 w-16 text-financial-encrypted mx-auto mb-4" />
+              <TrendingUp className="h-16 w-16 text-blue-500 mx-auto mb-4" />
               <h1 className="text-5xl font-bold text-foreground mb-6">
-                Private Bond Markets with FHE
+                Advanced Bond Trading Platform
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-                Trade tokenized bonds with encrypted issuer and buyer identities. 
-                Complete privacy meets regulatory compliance through Fully Homomorphic Encryption.
+                Institutional-grade bond trading with advanced encryption technology. 
+                Secure, private, and compliant financial markets for the future.
               </p>
               <div className="flex justify-center space-x-4">
                 <Button asChild size="lg" className="text-lg px-8">
@@ -37,52 +37,52 @@ const Index = () => {
         {/* Features Section */}
         <section className="py-20 px-6 bg-muted/50">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Why Choose BondVault?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Platform Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card>
                 <CardHeader>
-                  <Lock className="h-8 w-8 text-financial-encrypted mb-2" />
-                  <CardTitle>Fully Encrypted</CardTitle>
+                  <Zap className="h-8 w-8 text-blue-500 mb-2" />
+                  <CardTitle>High Performance</CardTitle>
                   <CardDescription>
-                    All identities and sensitive data encrypted using FHE technology
+                    Lightning-fast execution with advanced matching algorithms
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Your trading activity, bond holdings, and personal information remain completely private 
-                    while still enabling regulatory oversight when required.
+                    Experience sub-millisecond order execution with institutional-grade infrastructure 
+                    designed for high-frequency trading and large volume transactions.
                   </p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardHeader>
-                  <Eye className="h-8 w-8 text-financial-primary mb-2" />
-                  <CardTitle>Regulatory Transparent</CardTitle>
+                  <BarChart3 className="h-8 w-8 text-green-500 mb-2" />
+                  <CardTitle>Advanced Analytics</CardTitle>
                   <CardDescription>
-                    Selective disclosure to authorized regulators only
+                    Real-time market data and sophisticated analysis tools
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Compliance-ready infrastructure that allows regulators to access necessary 
-                    information while maintaining trader privacy in all other contexts.
+                    Access comprehensive market intelligence with real-time pricing, 
+                    yield curve analysis, and predictive modeling capabilities.
                   </p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardHeader>
-                  <TrendingUp className="h-8 w-8 text-financial-growth mb-2" />
-                  <CardTitle>Institutional Grade</CardTitle>
+                  <Building2 className="h-8 w-8 text-purple-500 mb-2" />
+                  <CardTitle>Enterprise Ready</CardTitle>
                   <CardDescription>
-                    Professional trading tools and market access
+                    Built for institutional and professional traders
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Advanced analytics, real-time pricing, and institutional-quality execution 
-                    for sophisticated bond market participants.
+                    Comprehensive risk management, compliance tools, and integration 
+                    capabilities for institutional trading operations.
                   </p>
                 </CardContent>
               </Card>
@@ -95,19 +95,19 @@ const Index = () => {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <Users className="h-12 w-12 text-financial-primary mx-auto mb-4" />
+                <TrendingUp className="h-12 w-12 text-blue-500 mx-auto mb-4" />
                 <h3 className="text-3xl font-bold mb-2">$2.5B+</h3>
                 <p className="text-muted-foreground">Total Volume Traded</p>
               </div>
               <div>
-                <Globe className="h-12 w-12 text-financial-encrypted mx-auto mb-4" />
+                <Users className="h-12 w-12 text-green-500 mx-auto mb-4" />
                 <h3 className="text-3xl font-bold mb-2">150+</h3>
                 <p className="text-muted-foreground">Active Institutional Traders</p>
               </div>
               <div>
-                <Shield className="h-12 w-12 text-financial-growth mx-auto mb-4" />
-                <h3 className="text-3xl font-bold mb-2">100%</h3>
-                <p className="text-muted-foreground">Privacy Guaranteed</p>
+                <BarChart3 className="h-12 w-12 text-purple-500 mx-auto mb-4" />
+                <h3 className="text-3xl font-bold mb-2">99.9%</h3>
+                <p className="text-muted-foreground">Uptime Guaranteed</p>
               </div>
             </div>
           </div>

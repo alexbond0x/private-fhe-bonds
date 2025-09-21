@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import WalletConnect from "./WalletConnect";
 
@@ -11,10 +11,10 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link to="/" className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-financial-encrypted" />
+              <TrendingUp className="h-8 w-8 text-blue-400" />
               <div>
-                <h1 className="text-xl font-bold">Private FHE Bonds</h1>
-                <p className="text-sm text-primary-foreground/70">Encrypted Bond Trading Platform</p>
+                <h1 className="text-xl font-bold">FHE Bond Exchange</h1>
+                <p className="text-sm text-primary-foreground/70">Private Financial Markets</p>
               </div>
             </Link>
           </div>
