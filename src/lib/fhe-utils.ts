@@ -1,35 +1,18 @@
-import { getFhevmInstance } from 'fhevmjs';
-
+// Mock FHE utilities for development
+// In production, replace with actual FHE implementation
 export class FHEUtils {
-  private static instance: any = null;
-
-  static async getInstance() {
-    if (!this.instance) {
-      this.instance = await getFhevmInstance();
-    }
-    return this.instance;
-  }
-
   static async encryptAmount(
     value: number,
     contractAddress: string,
     userAddress: string
   ): Promise<{ encryptedData: string; inputProof: string }> {
-    const instance = await this.getInstance();
+    // Mock implementation - replace with actual FHE encryption
+    const mockEncryptedData = `0x${Buffer.from(value.toString()).toString('hex')}`;
+    const mockProof = `0x${Buffer.from(`${contractAddress}-${userAddress}`).toString('hex')}`;
     
-    // Generate encryption for the amount
-    const encryptedData = instance.encrypt32(value);
-    
-    // Generate input proof for the encrypted data
-    const inputProof = await instance.generateInputProof({
-      input: encryptedData,
-      publicKey: instance.getPublicKey(contractAddress),
-      signature: await instance.signMessage(contractAddress, userAddress)
-    });
-
     return {
-      encryptedData: encryptedData,
-      inputProof: inputProof
+      encryptedData: mockEncryptedData,
+      inputProof: mockProof
     };
   }
 
@@ -37,8 +20,13 @@ export class FHEUtils {
     encryptedData: string,
     contractAddress: string
   ): Promise<number> {
-    const instance = await this.getInstance();
-    return instance.decrypt32(encryptedData, contractAddress);
+    // Mock implementation - replace with actual FHE decryption
+    try {
+      const hexValue = encryptedData.replace('0x', '');
+      return parseInt(hexValue, 16);
+    } catch {
+      return 0;
+    }
   }
 
   static async generateProof(
@@ -46,11 +34,7 @@ export class FHEUtils {
     contractAddress: string,
     userAddress: string
   ): Promise<string> {
-    const instance = await this.getInstance();
-    return await instance.generateInputProof({
-      input: data,
-      publicKey: instance.getPublicKey(contractAddress),
-      signature: await instance.signMessage(contractAddress, userAddress)
-    });
+    // Mock implementation - replace with actual proof generation
+    return `0x${Buffer.from(`${data}-${contractAddress}-${userAddress}`).toString('hex')}`;
   }
 }
